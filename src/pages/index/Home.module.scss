@@ -1,0 +1,62 @@
+.main {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: #1B1B1B;
+    display: table;
+    width: 100%;
+
+    section {
+        div {
+
+            .languages {
+                display: none;
+            }
+        }
+    }
+}
+
+.content {
+    width: 46.0625rem;
+}
+
+.cursor {
+    color: white;
+    width:2px
+}
+
+.typewriter {
+    span {
+        position: relative;
+        &::after {
+            position: absolute;
+            bottom:-12px;
+            left: 0;
+            content: '';
+            display: inline-block;
+            width: 0px;
+            height: 20px;
+            background-color: #23CB23;
+            transition: width .3s
+        }
+        &:hover::after {
+            width: 40%;
+            transition: width .3s
+        }
+    }
+}
+
+.icons {
+    >div {
+
+        transition: width .3s;
+    
+        &:hover {
+            width:21rem;
+            transition: width .3s;
+        }
+    }
+}

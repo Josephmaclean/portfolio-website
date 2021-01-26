@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@800&display=swap');
+@import './_breakpoints';
+
+@font-face {
+    font-family: 'Monaco';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Monaco'), url('../../fonts/Monaco.woff') format('woff');
+}
+
+$sora-font: 'Sora', sans-serif;
+$monaco-font: 'Monaco';
+
+:root {
+    --text-multiplier: 1;
+    --heading-line-height:1;
+}
+
+
+
+@include for-tablet-portrait-only {
+    :root{
+        --text-multiplier: 0.81;
+        --heading-line-height: 0.875;
+    }
+
+}
+
+@include for-phone-only {
+    :root {
+        --text-multiplier: 0.54;
+        --heading-line-height: 0.656;
+    }
+
+}
+
+h1 {
+    font-family: $sora-font;
+    font-size: calc(5.5rem * var(--text-multiplier));
+    line-height: calc(6rem * var(--heading-line-height));
+}
+
+.text-body-regular {
+    font-family: $monaco-font;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    letter-spacing: -0.01em;
+}
+
+.text-body-bold {
+    font-family: $sora-font;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    /* identical to box height, or 150% */
+
+    letter-spacing: -0.01em;
+}
+
+.text-subtext {
+    font-family: Gordita;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+
+    letter-spacing: -0.01em;
+}
+
+.text-subtext-medium {
+    font-family: Gordita;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    letter-spacing: -0.01em;
+}
+
+.text-caption  {
+    font-family: Gordita;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+    letter-spacing: -0.01em;
+}
